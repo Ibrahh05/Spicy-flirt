@@ -1,0 +1,280 @@
+/* App.css - Diseño Final Spicy Flirt 🔥 */
+
+/* 1. CONTENEDOR PRINCIPAL: Pantalla completa y centrado */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./public/imagenes/fondo.png");
+  background-size: cover;    /* Cubre toda la pantalla */
+  background-position: center; 
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prohíbe el scroll */
+  font-family: sans-serif;
+
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* El Header flota a la izquierda en el área rosa */
+.app-header {
+  position: absolute;
+  left: 50px;    /* Distancia desde el borde izquierdo */
+  top: 50%;      /* Lo baja a la mitad */
+  transform: translateY(-50%); /* Lo centra exactamente en vertical */
+
+}
+
+.app-logo {
+  width: 30%;  /* Ajusta el tamaño a tu gusto */
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  margin-left: 10%;
+}
+
+/* 2. LA TARJETA: Proporcional al alto de la pantalla (Desktop y Portátil) */
+.card {
+  background: rgb(29, 15, 15);
+  width: 100%;
+  max-width: 400px;
+  height: 90vh; /* Ocupa el 80% del alto de cualquier pantalla */
+  max-height: 650px;
+  border-radius: 30px;
+  border: 6px solid rgb(255, 200, 0);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  overflow: hidden;
+  /* Transición suave para cuando NO hay animaciones de swipe */
+  transition: transform 0.3s ease;
+}
+
+/* 3. IMAGEN: Protagonista y flexible */
+.card img {
+  width: 100%;
+  flex: 1; /* Se estira para ocupar todo el espacio disponible */
+  object-fit: cover;
+  min-height: 0; /* Permite que se encoja en pantallas pequeñas */
+}
+
+/* 4. INFORMACIÓN: Texto ajustado */
+.info {
+  padding: 15px 20px 85px 20px; /* Padding inferior grande para los botones */
+  text-align: center;
+  background: linear-gradient(135deg, #cf2424 0%, #8a070b 100%);
+}
+
+.info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.info p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* 5. BOTONES: Anclados dentro de la tarjeta */
+.actions {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn-no { color: #ff4d4d; }
+.btn-yes { color: #4CAF50; }
+
+/* 6. ANIMACIONES DE SWIPE (SALIDA) */
+
+/* Cuando pulsas X (Dislike) */
+.swipe-left {
+  transform: translateX(-200vw) rotate(-30deg) !important;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s !important;
+  opacity: 0;
+}
+
+/* Cuando pulsas ❤️ (Like) */
+.swipe-right {
+  transform: translateX(200vw) rotate(30deg) !important;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s !important;
+  opacity: 0;
+}
+
+/* 7. ANIMACIÓN DE ENTRADA (NUEVA TARJETA) */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+/* Definimos el movimiento */
+@keyframes flotar {
+  0% {
+    transform: translateY(0px); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(-15px); /* Sube 15 píxeles */
+  }
+  100% {
+    transform: translateY(0px); /* Vuelve al sitio */
+  }
+}
+
+/* Aplicamos la animación al logo */
+.app-logo {
+  /* ... tus otros estilos (height, filter, etc.) ... */
+  
+  animation: flotar 3s ease-in-out infinite; /* 3 segundos, suave, para siempre */
+}
+
+/* La nueva tarjeta entra con un efecto de pop-up */
+.card:not(.swipe-left):not(.swipe-right) {
+  animation: aparecer 0.4s ease-out forwards;
+}
+.chat {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+
+.burbuja {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 20px 20px 0 20px; /* Estilo chat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  animation: aparecerMsg 0.4s ease-out forwards;
+}
+
+@keyframes aparecerMsg {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.banner-container {
+  width: 50%;           /* Ajusta el ancho que quieras */
+  transition: transform 0.3s ease;
+}
+
+.banner-container:hover {
+  transform: scale(1.05) rotate(-2deg); /* Pequeño efecto al pasar el ratón */
+}
+
+.app-banner {
+  margin-top: 6%;
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: flotar 3s ease-in-out infinite; /* 3 segundos, suave, para siempre */
+}
+
+.banner2-container {
+  width: 50%;           /* Ajusta el ancho que quieras */
+  transition: transform 0.3s ease;
+}
+
+.banner2-container:hover {
+  transform: scale(1.05) rotate(-2deg); /* Pequeño efecto al pasar el ratón */
+}
+
+.banner2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 6px solid rgb(255, 33, 177);
+  border-radius: 20px;
+  animation: flotar 3s ease-in-out infinite; /* 3 segundos, suave, para siempre */
+}
+
+.banner-derecha {
+  position: absolute;
+  top: 40px;    /* Distancia desde arriba */
+  right: 40px;  /* Distancia desde la derecha */
+  width: 30%; /* Ajusta el tamaño que quieras */
+  z-index: 5;
+  pointer-events: none; /* Para que no tape los mensajes si el chat sube mucho */
+  transition: transform 0.3s ease;  
+}
+.banner-derecha:hover {
+  transform: scale(1.05) rotate(2deg); /* Rota hacia el otro lado para variar */
+}
+
+.img-banner-der {
+  width: 100%;
+  height: auto;
+  border: 6px solid rgb(196, 70, 255);
+  border-radius: 20px;
+  pointer-events: auto; /* Permite clics si quieres ponerle un enlace */
+  animation: flotar 4s ease-in-out infinite; /* Usa la misma animación del logo */
+}
+
+
+
+.banner-derecha1 {
+  position: absolute;
+  top: 35%;    /* Distancia desde arriba */
+  right: 40px;  /* Distancia desde la derecha */
+  width: 30%; /* Ajusta el tamaño que quieras */
+  z-index: 5;
+  pointer-events: none; /* Para que no tape los mensajes si el chat sube mucho */
+  transition: transform 0.3s ease;  
+}
+.banner-derecha1:hover {
+  transform: scale(1.05) rotate(2deg); /* Rota hacia el otro lado para variar */
+}
+
+.img-banner-der1 {
+  width: 100%;
+  height: auto;
+  pointer-events: auto; /* Permite clics si quieres ponerle un enlace */
+  animation: flotar 4s ease-in-out infinite; /* Usa la misma animación del logo */
+}
+
