@@ -19,7 +19,7 @@ const misFrases = [
   { nombre: "Ruben", texto: "¿Por donde se va a -La Esquina Prohibida-?." },
   { nombre: "Final", texto: "Aaaacho de aquí a la juankyneria 😝🔥" },
   { nombre: "Estefania", texto: "" },
-  { nombre: "Ibrah", texto: "No lo mejora ni un prompt ֎🇦🇮😝" },
+  { nombre: "Ibrah", texto: "No lo mejora ni un prompt 😝" },
   { nombre: "Cipri", texto: "Vale, ¿Quieres aprender Laravel? pibcha -> AQUI <-" },
   { nombre: "Carlos", texto: "mmmm como esta ese pollo fango 😏." }
 ];

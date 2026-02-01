@@ -3,91 +3,91 @@ export const listaComidas = [
     id: 1,
     nombre: "Sopa de macaco",
     img: "imagenes/sopa-macaco.png",
-    desc: "Crujientes y con un toque de veneno (es broma... o no)."
+    desc: "Si no te manchas, no lo hiciste bien 😏."
   },
   {
     id: 2,
     nombre: "Tarta de a la encia",
     img: "imagenes/dentadura.png",
-    desc: "Para los que aman el hot-dog pero tienen calor."
+    desc: "Si disfrutas comer sin culpa, ya tenemos algo en común 🤤"
   },
   {
     id: 3,
     nombre: "Sopa de Cucaracha",
     img: "imagenes/sopa-cucaracha.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Dale al 💘 si te tomas enserio la comida."
   },
 
   {
     id: 4,
     nombre: "Pescado a la nutella",
     img: "imagenes/pescao.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Dulce, salado y totalmente adictivo 🤤."
   },
   {
     id: 5,
     nombre: "Taco a la Rata",
     img: "imagenes/taco-rata.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "La tensión se crea cuando llega el plato principal. 🐀"
   },
   {
     id: 6,
     nombre: "Tazon de cigarro",
     img: "imagenes/cigarro.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Primero miras, luego dudas… y al final repites 😏"
   },
   {
     id: 7,
     nombre: "Lenteja al calcetin",
     img: "imagenes/calcetin.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Hay citas que no se olvidan… esta es una de ellas 😈"
   },
   {
     id: 8,
     nombre: "Batido Tutifruti",
     img: "imagenes/batido.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Bébeme despacio y no preguntes ingredientes 😈"
   },
   {
     id: 9,
     nombre: "Pollo Fango",
     img: "imagenes/fango.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Me gusta una cita donde nadie mira el reloj 🙄… solo mi relleno 😏."
   },
   {
     id: 10,
     nombre: "Pan de queso",
     img: "imagenes/queso.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Una mordida y ya es compromiso."
   },
   {
     id: 11,
     nombre: "Zumo Tropical",
     img: "imagenes/zumo.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Te lo tomas rápido o lo saboreas… tú decides 😈🥤"
   },
   {
     id: 12,
     nombre: "Murcielago a la cazuela",
     img: "imagenes/mur.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "No soy para todos, y eso lo hace mejor 😏."
   },
   {
     id: 13,
     nombre: "Rata Frita",
     img: "imagenes/ratafrita.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "El placer está en el primer crujido 😌."
   },
   {
     id: 14,
     nombre: "Pan Con Piii",
     img: "imagenes/pito.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Soy incómodo de mirar pero fácil de morder 😈."
   },
   {
     id: 15,
     nombre: "Sandwich de Nalga",
     img: "imagenes/pavo.png",
-    desc: "Carbohidratos sobre carbohidratos. Un sueño ninja."
+    desc: "Se me agarra con ganas y no se suelta pero si te gusto repetimos 😏."
   }
 ];
