@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   overflow: hidden; /* Prohíbe el scroll */
   font-family: sans-serif;
+
 }
 
 h1 {
@@ -48,10 +49,11 @@ h1 {
   max-height: 650px;
   border-radius: 30px;
   border: 6px solid rgb(255, 200, 0);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgb(224, 210, 7);
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   overflow: hidden;
   /* Transición suave para cuando NO hay animaciones de swipe */
   transition: transform 0.3s ease;
@@ -212,6 +214,8 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgb(224, 210, 7);
   animation: flotar 3s ease-in-out infinite; /* 3 segundos, suave, para siempre */
 }
 
@@ -229,6 +233,8 @@ h1 {
   height: auto;
   display: block;
   border: 6px solid rgb(255, 33, 177);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgb(255, 33, 177);
   border-radius: 20px;
   animation: flotar 3s ease-in-out infinite; /* 3 segundos, suave, para siempre */
 }
@@ -251,6 +257,8 @@ h1 {
   height: auto;
   border: 6px solid rgb(70, 190, 255);
   border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgb(0, 170, 255);
   pointer-events: auto; /* Permite clics si quieres ponerle un enlace */
   animation: flotar 4s ease-in-out infinite; /* Usa la misma animación del logo */
 }
