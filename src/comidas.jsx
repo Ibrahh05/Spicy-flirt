@@ -62,13 +62,13 @@ export const listaComidas = [
   },
   {
     id: 11,
-    nombre: "Zumo Tropical",
+    nombre: "Zumo Trocical",
     img: "imagenes/zumo.png",
     desc: "Te lo tomas rápido o lo saboreas… tú decides 😈🥤"
   },
   {
     id: 12,
-    nombre: "Murcielago a la cazuela",
+    nombre: "Covid a la cazuela",
     img: "imagenes/mur.png",
     desc: "No soy para todos, y eso lo hace mejor 😏."
   },

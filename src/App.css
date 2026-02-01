@@ -277,3 +277,39 @@ h1 {
   animation: flotar 4s ease-in-out infinite; /* Usa la misma animación del logo */
 }
 
+.contadores-sexy {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px; /* Un poco más de espacio entre ellos */
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7); /* Fondo un poco más oscuro para que el blanco destaque */
+  padding: 15px 40px; /* Más grande */
+  border-radius: 60px;
+  border: 4px solid #ffeb3b; /* Borde más grueso para que se vea potente */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.4);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; /* Tamaño mucho más grande */
+  font-weight: 10;
+  color: #ffffff; /* Letras blancas */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Quitamos los colores verde/rojo de los números y los dejamos blancos */
+.numero-like, .numero-dislike {
+  color: #ffffff; 
+}
+
+.emoji {
+  font-size: 1.8rem; /* Emoji grande acorde al texto */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}

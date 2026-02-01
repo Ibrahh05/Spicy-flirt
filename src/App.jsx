@@ -9,16 +9,17 @@ import './App.css'
 // Mensajes que aparecen en el chat cada vez que das like o dislike
 const misFrases = [
   { nombre: "Rios_Usurero", texto: "¡Si quereis una buena comida pincha -> AQUI <- 💸bomboclat" },
-  { nombre: "Pablito", texto: "Como esta el fumo diossss... 💦" },
+  { nombre: "Pablito", texto: "Como estabas @fumo trocical diossss... 💦" },
   { nombre: "Juanaco69", texto: "boof como esta la comida de ...." },
-  { nombre: "Sergio", texto: "Malisimo ese estofado de neumatico 🤮" },
+  { nombre: "Sergio", texto: "Malisimo ese batido de tutifruti 🤮" },
   { nombre: "Pikosss", texto: "Ostia sopa de macaquiño 🐒" },
   { nombre: "Rapadisimo", texto: "¡Match! Me lo como todo 😝😝." },
   { nombre: "Paco_Porros", texto: "@rapadisimo Te veo bien pero bien tragon 🤑" },
+  { nombre: "Pollo Fango", texto: "@juanaco69 que noche pasamos he guapetón 😘, a ver cuando repetimos" },
   { nombre: "Klara", texto: "Seguir asi mis exclavos." },
   { nombre: "Ruben", texto: "¿Por donde se va a -La Esquina Prohibida-?." },
   { nombre: "Final", texto: "Aaaacho de aquí a la juankyneria 😝🔥" },
-  { nombre: "Estefania", texto: "" },
+  { nombre: "Encarna", texto: "¿Es aquí donde se piden citas medicas? ui que buenos mozos hay por aqui" },
   { nombre: "Ibrah", texto: "No lo mejora ni un prompt 😝" },
   { nombre: "Cipri", texto: "Vale, ¿Quieres aprender Laravel? pibcha -> AQUI <-" },
   { nombre: "Carlos", texto: "mmmm como esta ese pollo fango 😏." }
@@ -27,6 +28,8 @@ const misFrases = [
 function App() {
   // Variables de estado para controlar la comida actual, el chat y las pantallas ocultas
   const [index, setIndex] = useState(0);
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
   const [mensajes, setMensajes] = useState([]); 
   const [mostrarJuanky, setMostrarJuanky] = useState(false);
   const [mostrarRuben, setMostrarRuben] = useState(false);
@@ -39,9 +42,10 @@ function App() {
     // Sonidos según el botón pulsado
     if (tipo === 'like') {
       new Audio('/mmm.mp3').play();
-    }
-    if (tipo === 'dislike') {
+      setLikes(likes + 1); // <--- SUMA LIKE
+    } else {
       new Audio('/nomames.mp3').play();
+      setDislikes(dislikes + 1); // <--- SUMA DISLIKE
     }
     
     // Elegimos la frase que toca del array misFrases
@@ -126,7 +130,18 @@ function App() {
           </div>
         ))}
       </div>
+      <div className="contadores-sexy">
+        <div className="stat">
+          <span className="emoji">✖️</span>
+          <span className="numero-dislike">{dislikes}</span>
+        </div>
+        <div className="stat">
+          <span className="emoji">❤️</span>
+          <span className="numero-like">{likes}</span>
+        </div>
+      </div>
     </div>
+
   );
 }
 
