@@ -51,7 +51,7 @@ function App() {
     // Elegimos la frase que toca del array misFrases
     const fraseDeTurno = misFrases[index % misFrases.length];
     
-    // Guardamos la frase nueva en el chat (solo mostramos las 3 últimas)
+    // Guardamos la frase nueva en el chat (solo mostramos las 2 últimas)
     setMensajes((prev) => [...prev.slice(-1), fraseDeTurno]); 
 
     // Pasamos a la siguiente comida (si llegamos al final, volvemos a la primera)
