@@ -14,7 +14,6 @@
   background-repeat: no-repeat;
   overflow: hidden; /* Prohíbe el scroll */
   font-family: sans-serif;
-
 }
 
 h1 {
@@ -250,7 +249,7 @@ h1 {
 .img-banner-der {
   width: 100%;
   height: auto;
-  border: 6px solid rgb(196, 70, 255);
+  border: 6px solid rgb(70, 190, 255);
   border-radius: 20px;
   pointer-events: auto; /* Permite clics si quieres ponerle un enlace */
   animation: flotar 4s ease-in-out infinite; /* Usa la misma animación del logo */
